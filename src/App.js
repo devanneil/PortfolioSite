@@ -2,7 +2,7 @@ import headshot from './pictures/Headshot.png'
 function Headshot() {
   return <img src={headshot} alt="Headshot image" />
 }
-export default function Square() {
+export default function App() {
   return <div>
     <h1>Devan Neil</h1>
     <p1>
