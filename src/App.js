@@ -1,6 +1,6 @@
 import headshot from './pictures/Headshot.png'
 function Headshot() {
-  return <img src={headshot} alt="Headshot image" />
+  return <img src={headshot} alt="Devan Neil" />
 }
 export default function App() {
   return <div>
