@@ -1,0 +1,50 @@
+.header-wrapper {
+    display: flex;
+    align-items: stretch;
+    --titleBarHeight: 97px;
+    --navBarHeight: 72px;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;  /* stack titlebar + navbar vertically */
+    flex: 1;                 /* take all remaining width */
+}
+
+.titlebar {
+    display: flex;              /* puts items horizontally */
+    align-items: center;        /* vertically center items */
+    padding: 10px 0px;
+    background-color: #282c34;
+    height: var(--titleBarHeight);
+}
+
+.titlebar-title {
+    font-size: calc(var(--titleBarHeight) * 0.8);
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+.titlebar-logo {
+    width: auto;                /* resize as needed */
+    height: calc(var(--navBarHeight) + var(--titleBarHeight));
+    margin-right: 0;
+}
+
+.navbar {
+    display: flex;              /* puts items horizontally */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;        /* vertically center items */
+    padding: 30px 10px;
+    background-color: #32a852;
+    height: var(--navBarHeight);
+}
+
+.navbarEntry {
+    flex: 1;
+    align-self: center;
+    font-size: calc(var(--navBarHeight) * 0.5);
+    color: #FFFFFF;
+    margin: 10px;
+}

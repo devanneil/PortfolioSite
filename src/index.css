@@ -78,7 +78,7 @@ img {
   height: auto;
   display: block;
   margin: 0 auto; /* center image */
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /* ========================
