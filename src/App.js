@@ -1,11 +1,8 @@
 import headshot from './pictures/Headshot.png'
 import TitleBar from './titleBar'
-function Headshot() {
-  return <img src={headshot} alt="Headshot image" />
-}
 export default function App() {
   return <div>
-    <TitleBar title="Devan Neil" imageSrc={headshot} imageAlt="Headshot image"/>
+    <TitleBar title="Devan Neil" imageSrc={headshot} imageAlt="Headshot"/>
     <p>
       This is a placeholder for my portfolio website.
       I am currently in the process of learning React to make this look better.
