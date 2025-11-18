@@ -1,8 +1,8 @@
 .header-wrapper {
     display: flex;
     align-items: stretch;
-    --titleBarHeight: 97px;
-    --navBarHeight: 72px;
+    --titleBarHeight: 16vh;
+    --navBarHeight: 10vh;
     --titleBarColor: #282c34;
     --navBarColor: #1f2839;
 }
@@ -15,23 +15,35 @@
 
 .titlebar {
     display: flex;              /* puts items horizontally */
-    align-items: center;        /* vertically center items */
-    padding: 10px 0px;
+    flex-direction: column;
+    align-items: flex-start;        /* vertically center items */
     background-color: var(--titleBarColor);
     height: var(--titleBarHeight);
+    background: linear-gradient(to left top, var(--titleBarColor), var(--titleBarColor), rgba(0,0,0,1));
 }
 
 .titlebar-title {
-    font-size: calc(var(--titleBarHeight) * 0.8);
+    font-size: calc(var(--titleBarHeight) * 0.4);
     color: #FFFFFF;
-    margin: 5px;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-bottom: 0;
+}
+.titlebar-text {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.465);
+    display: flex;
+    flex-direction: column;   /* stacks title + details vertically */
+    justify-content: center;  /* optional: vertically center text */
+    margin: 1vh;
+    margin-top: 0;
 }
 
 .titlebar-logo {
     width: auto;                /* resize as needed */
     height: calc(var(--navBarHeight) + var(--titleBarHeight));
     margin-right: 0;
-    border-width: 0 0 10px 10px;
+    border-width: 0 0 2px 2px;
     border-style: solid;
     border-image: black;
 }
@@ -53,7 +65,7 @@
     align-self: center;
     text-align: center;
     position: relative;
-    font-size: calc(var(--navBarHeight) * 0.5);
+    font-size: calc(var(--navBarHeight) * 0.3);
     color: #FFFFFF;
     margin: 10px;
 }

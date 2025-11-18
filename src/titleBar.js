@@ -10,6 +10,7 @@ const NAV_ENTRIES = [
 
 export default function TitleBar({
   title = "Default Title",
+  details = "",
   imageSrc = "/logo192.png",
   imageAlt = "Site logo",
   selectedPage = "None"
@@ -18,7 +19,8 @@ export default function TitleBar({
     <div className="header-wrapper">
         <div className="bars">
             <div className="titlebar">
-            <h1 className="titlebar-title">{title}</h1>
+              <h1 className="titlebar-title">{title}</h1>
+              <h2 className="titlebar-text"> {details}</h2>
             </div>
             <div className="navbar">
                 {NAV_ENTRIES.map((entry) => (

@@ -3,7 +3,7 @@ import TitleBar from './titleBar'
 
 export default function App() {
   return <div>
-    <TitleBar title="Devan Neil" imageSrc={headshot} imageAlt="Headshot"/>
+    <TitleBar title="Devan Neil" details={<q>How do we change the word? One step at a time.</q>} imageSrc={headshot} imageAlt="Headshot"/>
     <p>
       This is a placeholder for my portfolio website.
       I am currently in the process of learning React to make this look better.
