@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./pictures/LogoSmall.PNG"
 import "./titleBar.css"; // we'll create this next
 
 const NAV_ENTRIES = [
@@ -13,12 +14,12 @@ const NAV_ENTRIES = [
 export default function TitleBar({
   title = "Default Title",
   details = "",
-  imageSrc = "/LogoSmall.png",
+  imageSrc = {Logo},
   imageAlt = "Site logo",
   selectedPage = "None"
 }) {
   return (
-    <span className="header-wrapper">
+    <div className="header-wrapper">
         <div className="bars">
             <div className="titlebar">
               <h1 className="titlebar-title">{title}</h1>
@@ -42,6 +43,6 @@ export default function TitleBar({
             alt={imageAlt}
             className="titlebar-logo"
         />
-    </span>
+    </div>
   );
 }

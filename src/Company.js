@@ -1,8 +1,9 @@
 import TitleBar from './titleBar'
+import Logo from './pictures/LogoSmall.PNG'
 
 export default function Company() {
   return <div>
-    <TitleBar selectedPage='3D Neil Tech'/>
+    <TitleBar selectedPage='3D Neil Tech' image={Logo}/>
     <p>
       This is a placeholder for my portfolio website.
       I am currently in the process of learning React to make this look better.

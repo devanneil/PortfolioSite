@@ -1,8 +1,8 @@
 .header-wrapper {
     display: flex;
     align-items: stretch;
-    --titleBarHeight: 16vh;
-    --navBarHeight: 10vh;
+    --titleBarHeight: clamp(4rem, 7vw, 7rem); 
+    --navBarHeight: clamp(2rem, 3vw, 3rem); 
     --titleBarColor: #282c34;
     --navBarColor: #1f2839;
 }
@@ -32,7 +32,7 @@
     margin-bottom: 0;
 }
 .titlebar-text {
-    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-size: clamp(0.5rem, 1vw, 1rem);
     color: rgba(255, 255, 255, 0.465);
     display: flex;
     flex-direction: column;   /* stacks title + details vertically */
@@ -55,7 +55,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;        /* vertically center items */
-    padding: 3vh 2vh;
     background-color: var(--navBarColor);
     height: var(--navBarHeight);
     position: relative;
@@ -84,55 +83,18 @@
   pointer-events: none; /* don’t block clicks */
 }
 @media (min-width: 600px) {
-    /* Add vertical gradient separator on the right */
-    .navbarEntry:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 10%;              /* start fade a bit from the top */
-    bottom: 10%;           /* end fade a bit before the bottom */
-    right: 0;              /* right edge of item */
-    width: 2px;            /* thickness of the divider */
-    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+    .header-wrapper {
+        flex-direction: row;
     }
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        display: grid;           /* switch to grid layout */
-        grid-template-columns: 1fr 1fr; /* two columns; change as needed */
-        grid-auto-rows: auto;    /* auto row height */
-        gap: 0.5vh 1vh;          /* vertical and horizontal spacing */
-        padding: 1vh 2vh;
+    .header-wrapper {
+        flex-direction: column;
     }
-    .navbarEntry:last-child {
-        grid-column: 1 / -1;  /* span all columns */
-        justify-self: stretch; /* stretch horizontally */
-    }
-
-    /* Add vertical gradient separator on the right */
-    .navbarEntry:nth-child(odd):not(:last-child)::after {
-        content: "";
-        position: absolute;
-        top: 10%;
-        bottom: 10%;
-        right: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
-    } 
-
-    /* Horizontal gradient separator (bottom border) for every other row */
-    .navbarEntry::before {
-        content: "";
-        position: absolute;
-        left: 10%;
-        right: 10%;
-        bottom: 0;
-        height: 2px;
-        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
-    }
-
-    .navbarEntry {
-        margin: 0;               /* remove extra margin */
-        text-align: center;
+    .titlebar-logo {
+        order: -1;
+        width: fit-content;
+        height: auto;
     }
 }
