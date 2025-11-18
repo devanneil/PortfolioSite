@@ -16,7 +16,7 @@ export default function TitleBar({
   selectedPage = "None"
 }) {
   return (
-    <div className="header-wrapper">
+    <span className="header-wrapper">
         <div className="bars">
             <div className="titlebar">
               <h1 className="titlebar-title">{title}</h1>
@@ -40,6 +40,6 @@ export default function TitleBar({
             alt={imageAlt}
             className="titlebar-logo"
         />
-    </div>
+    </span>
   );
 }

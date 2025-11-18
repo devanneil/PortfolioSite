@@ -82,20 +82,3 @@
   width: 2px;            /* thickness of the divider */
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
 }
-
-@media (max-width: 600px) {
-  .titlebar {
-      height: 12vh;
-      padding: 0.5vh 2vh;
-  }
-  .navbar {
-      height: 8vh;
-      padding: 1vh 2vh;
-  }
-  .navbarEntry {
-      margin: 0.5vh;
-  }
-  .navbar {
-    flex-wrap: wrap; /* allows wrapping to new line on small screens */
-    }
-}
