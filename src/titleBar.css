@@ -3,6 +3,8 @@
     align-items: stretch;
     --titleBarHeight: 97px;
     --navBarHeight: 72px;
+    --titleBarColor: #282c34;
+    --navBarColor: #1f2839;
 }
 
 .bars {
@@ -15,7 +17,7 @@
     display: flex;              /* puts items horizontally */
     align-items: center;        /* vertically center items */
     padding: 10px 0px;
-    background-color: #282c34;
+    background-color: var(--titleBarColor);
     height: var(--titleBarHeight);
 }
 
@@ -29,6 +31,9 @@
     width: auto;                /* resize as needed */
     height: calc(var(--navBarHeight) + var(--titleBarHeight));
     margin-right: 0;
+    border-width: 0 0 10px 10px;
+    border-style: solid;
+    border-image: black;
 }
 
 .navbar {
@@ -37,14 +42,29 @@
     justify-content: space-between;
     align-items: center;        /* vertically center items */
     padding: 30px 10px;
-    background-color: #32a852;
+    background-color: var(--navBarColor);
     height: var(--navBarHeight);
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), var(--navBarColor), var(--navBarColor));
 }
 
 .navbarEntry {
     flex: 1;
     align-self: center;
+    text-align: center;
+    position: relative;
     font-size: calc(var(--navBarHeight) * 0.5);
     color: #FFFFFF;
     margin: 10px;
+}
+
+/* Add vertical gradient separator on the right */
+.navbarEntry:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;              /* start fade a bit from the top */
+  bottom: 10%;           /* end fade a bit before the bottom */
+  right: 0;              /* right edge of item */
+  width: 2px;            /* thickness of the divider */
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
 }
