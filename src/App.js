@@ -1,4 +1,6 @@
 import headshot from './pictures/Headshot.png'
+import TitleBar from './titleBar'
+
 export default function App() {
   return <div>
     <TitleBar title="Devan Neil" imageSrc={headshot} imageAlt="Headshot"/>
