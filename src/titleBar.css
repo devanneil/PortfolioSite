@@ -7,15 +7,24 @@
     --navBarColor: #1f2839;
 }
 
+@media (max-width: 600px) {
+  .titlebar {
+      height: 12vh;
+      padding: 0.5vh 2vh;
+  }
+  .navbar {
+      height: 8vh;
+      padding: 1vh 2vh;
+  }
+  .navbarEntry {
+      margin: 0.5vh;
+  }
+}
+
 .bars {
     display: flex;
     flex-direction: column;  /* stack titlebar + navbar vertically */
     flex: 1;                 /* take all remaining width */
-}
-
-.titlebar, .navbar {
-    min-height: 50px; /* ensures a reasonable minimum */
-    max-height: 150px; /* prevents huge bars on big screens */
     box-sizing: border-box;
 }
 
@@ -30,7 +39,7 @@
 }
 
 .titlebar-title {
-    font-size: clamp(1rem, 4.5vw, 2rem); 
+    font-size: clamp(1rem, 2.5vw, 3rem); 
     color: #FFFFFF;
     margin-top: 1vh;
     margin-left: 2vh;
@@ -72,7 +81,7 @@
     align-self: center;
     text-align: center;
     position: relative;
-    font-size: calc(var(--navBarHeight) * 0.3);
+    font-size: clamp(0.1rem, 1vw, 1rem);
     color: #FFFFFF;
     margin: 1vh;
 }
