@@ -6,6 +6,7 @@ const NAV_ENTRIES = [
   { name: "Projects", route: "/projects" },
   { name: "About", route: "/about" },
   { name: "Contact", route: "/contact" },
+  { name: "3D Neil Tech", route: "/3DNeilTech"}
 ];
 
 export default function TitleBar({

@@ -63,6 +63,7 @@
 }
 
 .navbarEntry {
+    position: relative;
     flex: 1;
     align-self: center;
     text-align: center;
@@ -72,13 +73,56 @@
     margin: 1vh;
 }
 
-/* Add vertical gradient separator on the right */
-.navbarEntry:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 10%;              /* start fade a bit from the top */
-  bottom: 10%;           /* end fade a bit before the bottom */
-  right: 0;              /* right edge of item */
-  width: 2px;            /* thickness of the divider */
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+@media (min-width: 600px) {
+    /* Add vertical gradient separator on the right */
+    .navbarEntry:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10%;              /* start fade a bit from the top */
+    bottom: 10%;           /* end fade a bit before the bottom */
+    right: 0;              /* right edge of item */
+    width: 2px;            /* thickness of the divider */
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: grid;           /* switch to grid layout */
+        grid-template-columns: 1fr 1fr; /* two columns; change as needed */
+        grid-auto-rows: auto;    /* auto row height */
+        gap: 0.5vh 1vh;          /* vertical and horizontal spacing */
+        padding: 1vh 2vh;
+    }
+    .navbarEntry:last-child {
+        grid-column: 1 / -1;  /* span all columns */
+        justify-self: stretch; /* stretch horizontally */
+    }
+
+    /* Add vertical gradient separator on the right */
+    .navbarEntry:nth-child(odd):not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+    } 
+
+    /* Horizontal gradient separator (bottom border) for every other row */
+    .navbarEntry::before {
+        content: "";
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        height: 2px;
+        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+    }
+
+    .navbarEntry {
+        margin: 0;               /* remove extra margin */
+        text-align: center;
+    }
 }
