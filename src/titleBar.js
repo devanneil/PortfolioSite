@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./pictures/LogoSmall.PNG"
+import Logo from './pictures/LogoSmall.png'
 import "./titleBar.css"; // we'll create this next
 
 const NAV_ENTRIES = [
@@ -14,7 +14,7 @@ const NAV_ENTRIES = [
 export default function TitleBar({
   title = "Default Title",
   details = "",
-  imageSrc = {Logo},
+  imageSrc = Logo,
   imageAlt = "Site logo",
   selectedPage = "None"
 }) {
