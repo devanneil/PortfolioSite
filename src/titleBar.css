@@ -13,6 +13,13 @@
     flex: 1;                 /* take all remaining width */
 }
 
+.titlebar, .navbar {
+    min-height: 50px; /* ensures a reasonable minimum */
+    max-height: 150px; /* prevents huge bars on big screens */
+    box-sizing: border-box;
+}
+
+
 .titlebar {
     display: flex;              /* puts items horizontally */
     flex-direction: column;
@@ -23,14 +30,14 @@
 }
 
 .titlebar-title {
-    font-size: calc(var(--titleBarHeight) * 0.4);
+    font-size: clamp(1rem, 4.5vw, 2rem); 
     color: #FFFFFF;
     margin-top: 1vh;
     margin-left: 2vh;
     margin-bottom: 0;
 }
 .titlebar-text {
-    font-size: small;
+    font-size: clamp(0.75rem, 1vw, 1rem);
     color: rgba(255, 255, 255, 0.465);
     display: flex;
     flex-direction: column;   /* stacks title + details vertically */
