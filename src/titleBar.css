@@ -53,7 +53,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;        /* vertically center items */
-    padding: 30px 10px;
+    padding: 3vh 2vh;
     background-color: var(--navBarColor);
     height: var(--navBarHeight);
     position: relative;
@@ -67,7 +67,7 @@
     position: relative;
     font-size: calc(var(--navBarHeight) * 0.3);
     color: #FFFFFF;
-    margin: 10px;
+    margin: 1vh;
 }
 
 /* Add vertical gradient separator on the right */
