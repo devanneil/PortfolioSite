@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./titleBar.css"; // we'll create this next
 
 const NAV_ENTRIES = [
@@ -6,17 +7,18 @@ const NAV_ENTRIES = [
   { name: "Projects", route: "/projects" },
   { name: "About", route: "/about" },
   { name: "Contact", route: "/contact" },
+  { name: "3D Neil Tech", route: "/company"}
 ];
 
 export default function TitleBar({
   title = "Default Title",
   details = "",
-  imageSrc = "/logo192.png",
+  imageSrc = "/LogoSmall.png",
   imageAlt = "Site logo",
   selectedPage = "None"
 }) {
   return (
-    <div className="header-wrapper">
+    <span className="header-wrapper">
         <div className="bars">
             <div className="titlebar">
               <h1 className="titlebar-title">{title}</h1>
@@ -24,14 +26,14 @@ export default function TitleBar({
             </div>
             <div className="navbar">
                 {NAV_ENTRIES.map((entry) => (
-                    <div
+                    <Link
                     key={entry.name}
-                    className={`navbarEntry ${
-                        selectedPage === entry.name ? "selected" : ""
-                    }`}
+                    to={entry.route}
+                    className={`navbarEntry`}
                     >
                     {entry.name}
-                    </div>
+                    {selectedPage === entry.name && <div className="navbarHighlight" />}
+                    </Link>
                 ))}
             </div>
         </div>
@@ -40,6 +42,6 @@ export default function TitleBar({
             alt={imageAlt}
             className="titlebar-logo"
         />
-    </div>
+    </span>
   );
 }
