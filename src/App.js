@@ -1,25 +1,22 @@
-import headshot from './pictures/Headshot.png'
-import TitleBar from './titleBar'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Projects from "./Projects";
+import About from "./About";
+import Contact from "./Contact";
+import Home from "./Home";
+import Company from "./Company";
+import NotFound from "./NotFound";
 
 export default function App() {
-  return <div>
-    <TitleBar title="Devan Neil" details={<q>How do we change the word? One step at a time.</q>} imageSrc={headshot} imageAlt="Headshot"/>
-    <p>
-      This is a placeholder for my portfolio website.
-      I am currently in the process of learning React to make this look better.
-      "How do we change the world? One step at a time."
-    </p>
-    <p>
-      <a href="https://github.com/devanneil" target="_blank" rel="noopener noreferrer">
-        Visit my GitHub
-      </a>
-    </p>
-    <br />
-    <p>
-      <a href="www.linkedin.com/in/devan-neil" target="_blank" rel="noopener noreferrer">
-        Visit my LinkedIn
-      </a>
-    </p>
-
-  </div>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
 }

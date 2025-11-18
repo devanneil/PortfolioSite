@@ -73,6 +73,16 @@
     margin: 1vh;
 }
 
+.navbarHighlight {
+  position: absolute;
+  top: 10%;    /* inset from top */
+  bottom: 10%; /* inset from bottom */
+  left: 10%;   /* inset from left */
+  right: 10%;  /* inset from right */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;  /* optional rounded corners */
+  pointer-events: none; /* don’t block clicks */
+}
 @media (min-width: 600px) {
     /* Add vertical gradient separator on the right */
     .navbarEntry:not(:last-child)::after {
