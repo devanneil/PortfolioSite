@@ -5,6 +5,18 @@
     --navBarHeight: clamp(2rem, 3vw, 3rem); 
     --titleBarColor: #282c34;
     --navBarColor: #1f2839;
+    --bottomGradientHeight: 2.5vh;
+    position: sticky;   /* <-- the magic */
+    padding-bottom: var(--bottomGradientHeight);
+}
+
+.header-wrapper::after {
+    content: ''; /* Essential for pseudo-elements to render */
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    height: var(--bottomGradientHeight);
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
 }
 
 .bars {
