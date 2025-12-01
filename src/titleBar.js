@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from './pictures/LogoSmall.png'
-import "./titleBar.css"; // we'll create this next
+import "./titleBar.css";
 
 const NAV_ENTRIES = [
   { name: "Home", route: "/" },

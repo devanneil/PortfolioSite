@@ -2,7 +2,7 @@ import TitleBar from './titleBar'
 import Logo from './pictures/LogoSmall.png'
 
 export default function Company() {
-  return <div>
+  return <div className='contentBody'>
     <TitleBar selectedPage='3D Neil Tech' imageSrc={Logo}/>
     <p>
       This is a placeholder for my portfolio website.

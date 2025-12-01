@@ -2,7 +2,7 @@ import headshot from './pictures/Headshot.png'
 import TitleBar from './titleBar'
 
 export default function Projects() {
-  return <div>
+  return <div className='contentBody'>
     <TitleBar title="Project Gallery" details={<q>How do we change the world? One step at a time.</q>} imageSrc={headshot} selectedPage="Projects" imageAlt="Headshot"/>
     <p>
       This is a placeholder for my portfolio website.
