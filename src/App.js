@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Company from "./Company";
 import NotFound from "./NotFound";
+import "./colorPalette.css";
 
 export default function App() {
   return (

@@ -8,7 +8,7 @@ export default function Home() {
       <p> 
         This is a placeholder for my portfolio website.
         I am currently in the process of learning React to make this look better.
-        "How do we change the world? One step at a time."
+        "How do we make this look better? One .css at a time..."
       </p>
     </ContentBlock>
     <p>

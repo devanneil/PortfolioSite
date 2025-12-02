@@ -1,8 +1,8 @@
 .contentBlock {
     display: flex;
     margin: 2.5vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-accent);
     border-radius: 2.5px;
     padding: 5px;
 }

@@ -3,8 +3,8 @@
     align-items: stretch;
     --titleBarHeight: clamp(4rem, 7vw, 7rem); 
     --navBarHeight: clamp(2rem, 3vw, 3rem); 
-    --titleBarColor: #282c34;
-    --navBarColor: #1f2839;
+    --titleBarColor: var(--color-primary);
+    --navBarColor: var(--color-secondary);
     --bottomGradientHeight: 2.5vh;
     position: sticky;   /* <-- the magic */
     padding-bottom: var(--bottomGradientHeight);
@@ -38,14 +38,14 @@
 
 .titlebar-title {
     font-size: clamp(1rem, 2.5vw, 3rem); 
-    color: #FFFFFF;
+    color: var(--color-text);
     margin-top: 1vh;
     margin-left: 2vh;
     margin-bottom: 0;
 }
 .titlebar-text {
     font-size: clamp(0.5rem, 1vw, 1rem);
-    color: rgba(255, 255, 255, 0.465);
+    color: var(--color-text-secondary);
     display: flex;
     flex-direction: column;   /* stacks title + details vertically */
     justify-content: center;  /* optional: vertically center text */
@@ -80,7 +80,7 @@
     text-align: center;
     position: relative;
     font-size: clamp(0.1rem, 1vw, 1rem);
-    color: #FFFFFF;
+    color: var(--color-text);
     margin: 1vh;
 }
 
@@ -90,7 +90,7 @@
   bottom: 10%; /* inset from bottom */
   left: 10%;   /* inset from left */
   right: 10%;  /* inset from right */
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(from var(--color-accent) r g b / 0.2);
   border-radius: 4px;  /* optional rounded corners */
   pointer-events: none; /* don’t block clicks */
 }
