@@ -12,8 +12,7 @@
 ======================== */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--color-surface);
-  color: var(--color-text);
+  background-color: rgba(0,0,0,1);
   line-height: 1.6;
   font-size: 16px;
 }
@@ -99,5 +98,6 @@ button:hover {
 
 .contentBody {
   background-color: var(--color-background);
-  height: 100vh;
+  min-height: 100vh;
+  counter-reset: figure-counter;
 }

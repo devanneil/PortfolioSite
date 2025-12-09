@@ -1,14 +1,16 @@
 import headshot from './pictures/Headshot.png'
 import TitleBar from './titleBar'
-
+import ContentBlock from './contentBlock'
 export default function Contact() {
   return <div className='contentBody'>
     <TitleBar title="Contact Info" details={<q>How do we change the world? One step at a time.</q>} imageSrc={headshot} selectedPage="Contact" imageAlt="Headshot"/>
-    <p>
-      This is a placeholder for my portfolio website.
-      I am currently in the process of learning React to make this look better.
-      "How do we change the world? One step at a time."
-    </p>
+    <ContentBlock image={headshot} caption='Here lies ghosts'> 
+      <p> 
+        This is a placeholder for my portfolio website.
+        I am currently in the process of learning React to make this look better.
+        "How do we make this look better? One .css at a time..."
+      </p>
+    </ContentBlock>
     <p>
       <a href="https://github.com/devanneil" target="_blank" rel="noopener noreferrer">
         Visit my GitHub
