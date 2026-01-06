@@ -18,9 +18,6 @@
     display: table;
     clear: both;           /* clears floats so container height expands */
 }
-.textContent {
-    
-}
 .figureWrapper {
     float: right;
     align-items: center; /* center the image */
@@ -45,4 +42,14 @@
     color: var(--color-accent);
     text-align: center;
 
+}
+.sectionHeader {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+.contentSection {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
 }

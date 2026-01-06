@@ -1,14 +1,17 @@
 import headshot from './pictures/Headshot.png'
 import TitleBar from './titleBar'
-
+import ContentBlock from './contentBlock'
 export default function Projects() {
   return <div className='contentBody'>
     <TitleBar title="Project Gallery" details={<q>How do we change the world? One step at a time.</q>} imageSrc={headshot} selectedPage="Projects" imageAlt="Headshot"/>
-    <p>
-      This is a placeholder for my portfolio website.
-      I am currently in the process of learning React to make this look better.
-      "How do we change the world? One step at a time."
-    </p>
+    <ContentBlock> 
+      <div>
+        <p className='contentSection'>
+          This is a placeholder for the projects section. Work in Progress.
+        </p>
+      </div>
+      
+    </ContentBlock>
     <p>
       <a href="https://github.com/devanneil" target="_blank" rel="noopener noreferrer">
         Visit my GitHub

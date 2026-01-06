@@ -6,7 +6,6 @@ import "./titleBar.css";
 const NAV_ENTRIES = [
   { name: "Home", route: "/" },
   { name: "Projects", route: "/projects" },
-  { name: "About", route: "/about" },
   { name: "Contact", route: "/contact" },
   { name: "3D Neil Tech", route: "/company"}
 ];
