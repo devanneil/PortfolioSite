@@ -8,10 +8,9 @@ import "./colorPalette.css";
 
 export default function App() {
   return (
-    <Router basename="/">
+    <Router basename="/devanneil">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/DevanNeil" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/company" element={<Company />} />
