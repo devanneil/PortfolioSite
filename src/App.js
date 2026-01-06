@@ -8,7 +8,7 @@ import "./colorPalette.css";
 
 export default function App() {
   return (
-    <Router basename="/devanneil">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
