@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -11,6 +11,7 @@ export default function App() {
     <Router basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/devanneil" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/company" element={<Company />} />
