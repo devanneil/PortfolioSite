@@ -1,27 +1,29 @@
 import headshot from './pictures/Headshot.png'
 import TitleBar from './titleBar'
 import ContentBlock from './contentBlock'
+import githubLogo from './pictures/githubLogoClear.png'
+import linkedInLogo from './pictures/linkedInLogo.png'
 export default function Contact() {
   return <div className='contentBody'>
-    <TitleBar title="Contact Info" details={<q>How do we change the world? One step at a time.</q>} imageSrc={headshot} selectedPage="Contact" imageAlt="Headshot"/>
-    <ContentBlock image={headshot} caption='Here lies ghosts'> 
-      <p> 
-        This is a placeholder for my portfolio website.
-        I am currently in the process of learning React to make this look better.
-        "How do we make this look better? One .css at a time..."
+    <TitleBar title="Contact Info" details="Contact and Social Media" imageSrc={headshot} selectedPage="Contact" imageAlt="Headshot"/>
+    <ContentBlock> 
+      <h1 className='sectionHeader'>
+        Contact Information
+      </h1>
+      <p className='contentSection'>
+        Email: devanneil2004@gmail.com
+      </p>
+      <p className='contentSection'>
+        See the links below for my github and social media.
       </p>
     </ContentBlock>
-    <p>
+    <div className='imageRow'>
       <a href="https://github.com/devanneil" target="_blank" rel="noopener noreferrer">
-        Visit my GitHub
+        <img className='imageLink' src={githubLogo} alt="The github logo"></img>
       </a>
-    </p>
-    <br />
-    <p>
       <a href="www.linkedin.com/in/devan-neil" target="_blank" rel="noopener noreferrer">
-        Visit my LinkedIn
+        <img className='imageLink' src={linkedInLogo} alt="The linkedIn logo"></img>
       </a>
-    </p>
-
+    </div>
   </div>
 }
