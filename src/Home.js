@@ -3,6 +3,7 @@ import full from './pictures/SelfFull.jpg'
 import TitleBar from './titleBar'
 import ContentBlock from './contentBlock'
 import Logo from './pictures/LogoSmall.png'
+import Printer from './pictures/3DPrinter.png'
 export default function Home() {
   return <div className='contentBody'>
     <TitleBar title="Devan Neil" details={<q>How do we change the world? One step at a time.</q>} imageSrc={headshot} selectedPage="Home" imageAlt="Headshot"/>
@@ -39,7 +40,7 @@ export default function Home() {
       </div>
     </ContentBlock>
 
-    <ContentBlock image={Logo} imageAlt='A placeholder image' caption='A placeholder image'> 
+    <ContentBlock image={Printer} imageAlt='3D Printer' caption='The original 3D printer which accumulated well over 2,000 running hours'> 
       <div>
         <h1 className='sectionHeader'>
         Why I Do What I Do

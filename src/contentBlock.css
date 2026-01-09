@@ -20,15 +20,16 @@
 }
 .figureWrapper {
     float: right;
-    align-items: center; /* center the image */
-    counter-increment: figure-counter;
+    display: inline-block; /* ← critical fix */
+    text-align: center;
 }
-
 .figure {
     max-width: clamp(20rem, 22vw, 25rem);
     max-height: clamp(20rem, 22vw, 25rem);
     height: auto;
     border-radius: 5px;
+    display: block;
+    text-align: center;
 }
 
 .figureCaption::before {
@@ -37,11 +38,16 @@
 }
 
 .figureCaption {
+    display: block;
+
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: var(--color-accent);
     text-align: center;
+    counter-increment: figure-counter;
 
+    max-width: clamp(20rem, 22vw, 25rem);
+    white-space: normal;
 }
 .sectionHeader {
     margin-top: 0.5rem;
