@@ -1,8 +1,9 @@
-import headshot from './pictures/Headshot.png'
+import headshot from './pictures/Headshot2.png'
 import TitleBar from './titleBar'
 import ContentBlock from './contentBlock'
 import githubLogo from './pictures/githubLogoClear.png'
 import linkedInLogo from './pictures/linkedInLogo.png'
+import facebookLogo from './pictures/FacebookLogo.png'
 export default function Contact() {
   return <div className='contentBody'>
     <TitleBar title="Contact Info" details="Contact and Social Media" imageSrc={headshot} selectedPage="Contact" imageAlt="Headshot"/>
@@ -11,7 +12,10 @@ export default function Contact() {
         Contact Information
       </h1>
       <p className='contentSection'>
-        Email: devanneil2004@gmail.com
+        Email: <a href="mailto:devanneil2004@gmail.com">devanneil2004@gmail.com</a>
+      </p>
+      <p className='contentSection'>
+        Phone Number: <a href="tel:+19703614121">(970) 361-4121</a>
       </p>
       <p className='contentSection'>
         See the links below for my github and social media.
@@ -23,6 +27,9 @@ export default function Contact() {
       </a>
       <a href="www.linkedin.com/in/devan-neil" target="_blank" rel="noopener noreferrer">
         <img className='imageLink' src={linkedInLogo} alt="The linkedIn logo"></img>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100008669838346" target="_blank" rel="noopener noreferrer">
+        <img className='imageLink' src={facebookLogo} alt="The Facebook logo"></img>
       </a>
     </div>
   </div>
