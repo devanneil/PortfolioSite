@@ -4,7 +4,6 @@ import ContentBlock from './contentBlock'
 import HMFrame from './pictures/HMFrame.png'
 import Logo from './pictures/LogoSmall.png'
 import LegoRobot from './pictures/LegoRobot.png'
-import NAOPDF from './assets/Investigating the Correlation Between Robot Informality and Ability to Affect Patient Anxiety.docx.pdf'
 export default function Projects() {
   return <div className='contentBody'>
     <TitleBar title="Project Gallery" details={"A comprehensive list of my engineering projects"} imageSrc={Robot} selectedPage="Projects" imageAlt="Headshot"/>
@@ -133,11 +132,11 @@ export default function Projects() {
           As more of my robotics curriculum, I needed to study how robots can interact with humans in a more social setting.
           For this task my group was given the NAO robot.
           We attempted to apply the NAO robot to treat anxiety caused by healthcare.
-          You can see our report below:
-          <br/>
-          <iframe title="PDF Report" src={NAOPDF} height="100%" width="30%">
-            <p>Your browser does not support iframes. <a href="path/to/yourfile.pdf">Download the PDF</a> instead.</p>
-          </iframe>
+          You can see our report {" "}
+          <a href='https://github.com/devanneil/devanneil.github.io/blob/f972c26c01e2697791a27a302acacafb20632cc0/src/assets/Investigating%20the%20Correlation%20Between%20Robot%20Informality%20and%20Ability%20to%20Affect%20Patient%20Anxiety.docx.pdf'
+          target="_blank"
+          rel="noopener noreferrer"
+          > here </a>
         </p>
       </div>
       
@@ -216,6 +215,6 @@ export default function Projects() {
       </div>
       
     </ContentBlock>
-
+    
   </div>
 }
