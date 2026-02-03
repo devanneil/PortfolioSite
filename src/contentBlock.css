@@ -68,7 +68,8 @@
     margin-top: 0.5rem;
     font-size: 1rem;
     color: var(--color-text-secondary);
-    margin-left: 5px;
+    justify-content: left;
+    text-align: left;
 }
 .imageRow {
     display: flex;
