@@ -9,7 +9,7 @@ export default function Projects() {
     <TitleBar title="Project Gallery" details={"A comprehensive list of my engineering projects"} imageSrc={Robot} selectedPage="Projects" imageAlt="Headshot"/>
     <ContentBlock>
       <h1 className='sectionHeader' style={{ fontSize: '4rem'}}>Robotics Projects</h1>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         Projects listed by size and scope
       </p>
     </ContentBlock >
@@ -144,7 +144,7 @@ export default function Projects() {
 
     <ContentBlock>
       <h1 className='sectionHeader' style={{ fontSize: '4rem'}}>Software Projects</h1>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         Quip goes here
       </p>
     </ContentBlock >
@@ -171,7 +171,7 @@ export default function Projects() {
 
     <ContentBlock> 
       <div>
-        <h1 className='sectionHeader'>VR Research</h1>
+        <h1 className='sectionHeader'>Automated Apple Harvesting COBOT</h1>
         <p className='contentSection'>
           This is a placeholder for the projects section. Work in Progress.
         </p>
@@ -181,7 +181,7 @@ export default function Projects() {
 
     <ContentBlock>
       <h1 className='sectionHeader' style={{ fontSize: '4rem'}}>Miscellaneous Projects</h1>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         A mostly comprehensive list of everything else, probably.
       </p>
     </ContentBlock >

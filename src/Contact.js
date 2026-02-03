@@ -11,13 +11,13 @@ export default function Contact() {
       <h1 className='sectionHeader'>
         Contact Information
       </h1>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         Email: <a href="mailto:devanneil2004@gmail.com">devanneil2004@gmail.com</a>
       </p>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         Phone Number: <a href="tel:+19703614121">(970) 361-4121</a>
       </p>
-      <p className='contentSection'>
+      <p className='contentSection' style={{ textAlign: 'center'}}>
         See the links below for my github and social media.
       </p>
     </ContentBlock>
