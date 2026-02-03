@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.72ac8499.css",
-    "main.js": "/static/js/main.28e72501.js",
+    "main.js": "/static/js/main.5a110f92.js",
     "static/media/3DPrinter.png": "/static/media/3DPrinter.9cbfde7876271f06ad17.png",
     "static/media/LogoSmall.png": "/static/media/LogoSmall.2258e1485b1343e9bb7a.png",
     "static/media/LegoRobot.png": "/static/media/LegoRobot.4517ee66fa93bcb350c0.png",
@@ -14,10 +14,10 @@
     "static/media/robot.jpg": "/static/media/robot.c8f2ab287417e18f8753.jpg",
     "index.html": "/index.html",
     "main.72ac8499.css.map": "/static/css/main.72ac8499.css.map",
-    "main.28e72501.js.map": "/static/js/main.28e72501.js.map"
+    "main.5a110f92.js.map": "/static/js/main.5a110f92.js.map"
   },
   "entrypoints": [
     "static/css/main.72ac8499.css",
-    "static/js/main.28e72501.js"
+    "static/js/main.5a110f92.js"
   ]
 }
